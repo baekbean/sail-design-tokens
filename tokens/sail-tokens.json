@@ -1,0 +1,522 @@
+{
+  "$metadata": {
+    "name": "Sail Design System",
+    "version": "1.0.0",
+    "description": "Design tokens for Sail — a calm micro-reset timer app",
+    "generatedAt": null,
+    "figmaTokenStudioCompatible": true
+  },
+
+  "global": {
+
+    "color": {
+      "$type": "color",
+      "$description": "Base color primitives",
+
+      "ocean": {
+        "50":  { "$value": "#EBF5FB" },
+        "100": { "$value": "#AED6F1" },
+        "200": { "$value": "#89CFF0" },
+        "300": { "$value": "#5DADE2" },
+        "400": { "$value": "#2E86C1" },
+        "500": { "$value": "#1B4F72" },
+        "600": { "$value": "#154360" },
+        "700": { "$value": "#0E2F44" },
+        "800": { "$value": "#0A1F2E" },
+        "900": { "$value": "#050F17" }
+      },
+      "sunset": {
+        "50":  { "$value": "#FFF5E6" },
+        "100": { "$value": "#FFEAA7" },
+        "200": { "$value": "#FFBE76" },
+        "300": { "$value": "#FF9F43" },
+        "400": { "$value": "#FF6B6B" },
+        "500": { "$value": "#EE5A24" },
+        "600": { "$value": "#E17055" },
+        "700": { "$value": "#C0392B" },
+        "800": { "$value": "#8B1A1A" },
+        "900": { "$value": "#5C1010" }
+      },
+      "twilight": {
+        "50":  { "$value": "#F0E6FF" },
+        "100": { "$value": "#CCD6F6" },
+        "200": { "$value": "#C9D6FF" },
+        "300": { "$value": "#A6C1EE" },
+        "400": { "$value": "#8892B0" },
+        "500": { "$value": "#667EEA" },
+        "600": { "$value": "#6C5CE7" },
+        "700": { "$value": "#4A3F6B" },
+        "800": { "$value": "#341F97" },
+        "900": { "$value": "#1A1A4E" }
+      },
+      "dawn": {
+        "50":  { "$value": "#FFF5F9" },
+        "100": { "$value": "#FBC2EB" },
+        "200": { "$value": "#F8A5D2" },
+        "300": { "$value": "#E8A0BF" },
+        "400": { "$value": "#C3CFE2" },
+        "500": { "$value": "#A6C1EE" },
+        "600": { "$value": "#7B8EC8" },
+        "700": { "$value": "#5C4A72" },
+        "800": { "$value": "#3A1C71" },
+        "900": { "$value": "#1E0A3C" }
+      },
+      "night": {
+        "50":  { "$value": "#E8ECF4" },
+        "100": { "$value": "#C9D6FF" },
+        "200": { "$value": "#8892B0" },
+        "300": { "$value": "#4A5280" },
+        "400": { "$value": "#2D3561" },
+        "500": { "$value": "#141E61" },
+        "600": { "$value": "#0C1445" },
+        "700": { "$value": "#0A0A2E" },
+        "800": { "$value": "#050515" },
+        "900": { "$value": "#020208" }
+      },
+      "white": { "$value": "#FFFFFF" },
+      "black": { "$value": "#000000" }
+    },
+
+    "opacity": {
+      "$type": "number",
+      "transparent": { "$value": 0.0 },
+      "subtle":      { "$value": 0.06 },
+      "light":       { "$value": 0.12 },
+      "muted":       { "$value": 0.2 },
+      "medium":      { "$value": 0.35 },
+      "half":        { "$value": 0.5 },
+      "strong":      { "$value": 0.7 },
+      "heavy":       { "$value": 0.85 },
+      "near-solid":  { "$value": 0.9 },
+      "solid":       { "$value": 1.0 }
+    }
+  },
+
+  "theme": {
+    "$description": "Semantic tokens per time-of-day theme",
+
+    "dawn": {
+      "sky": {
+        "top":    { "$value": "{global.color.dawn.100}" },
+        "mid":    { "$value": "{global.color.dawn.500}" },
+        "bottom": { "$value": "{global.color.dawn.400}" }
+      },
+      "water": {
+        "surface": { "$value": "{global.color.twilight.500}" },
+        "mid":     { "$value": "{global.color.dawn.700}" },
+        "deep":    { "$value": "{global.color.dawn.800}" }
+      },
+      "celestial": {
+        "body":     { "$value": "{global.color.sunset.100}" },
+        "glow":     { "$value": "rgba(255,224,102,0.25)" },
+        "type":     { "$value": "sun" }
+      },
+      "text": {
+        "primary":   { "$value": "{global.color.twilight.700}" },
+        "secondary": { "$value": "rgba(74,63,107,0.5)" }
+      },
+      "ui": {
+        "ring":             { "$value": "rgba(255,224,102,0.8)" },
+        "ringBackground":   { "$value": "rgba(255,255,255,0.15)" },
+        "buttonBackground": { "$value": "rgba(255,255,255,0.2)" },
+        "buttonActive":     { "$value": "rgba(255,224,102,0.4)" }
+      },
+      "boat": {
+        "hull": { "$value": "{global.color.dawn.700}" },
+        "sail": { "$value": "{global.color.sunset.50}" }
+      }
+    },
+
+    "day": {
+      "sky": {
+        "top":    { "$value": "{global.color.ocean.200}" },
+        "mid":    { "$value": "{global.color.ocean.300}" },
+        "bottom": { "$value": "{global.color.ocean.100}" }
+      },
+      "water": {
+        "surface": { "$value": "{global.color.ocean.400}" },
+        "mid":     { "$value": "{global.color.ocean.500}" },
+        "deep":    { "$value": "{global.color.ocean.600}" }
+      },
+      "celestial": {
+        "body":     { "$value": "{global.color.sunset.100}" },
+        "glow":     { "$value": "rgba(255,241,118,0.2)" },
+        "type":     { "$value": "sun" }
+      },
+      "text": {
+        "primary":   { "$value": "{global.color.ocean.700}" },
+        "secondary": { "$value": "rgba(26,58,74,0.45)" }
+      },
+      "ui": {
+        "ring":             { "$value": "rgba(255,255,255,0.9)" },
+        "ringBackground":   { "$value": "rgba(255,255,255,0.15)" },
+        "buttonBackground": { "$value": "rgba(255,255,255,0.2)" },
+        "buttonActive":     { "$value": "rgba(255,255,255,0.4)" }
+      },
+      "boat": {
+        "hull": { "$value": "#2C3E50" },
+        "sail": { "$value": "{global.color.white}" }
+      }
+    },
+
+    "dusk": {
+      "sky": {
+        "top":    { "$value": "{global.color.sunset.400}" },
+        "mid":    { "$value": "{global.color.sunset.500}" },
+        "bottom": { "$value": "{global.color.sunset.600}" }
+      },
+      "water": {
+        "surface": { "$value": "{global.color.twilight.600}" },
+        "mid":     { "$value": "{global.color.twilight.800}" },
+        "deep":    { "$value": "{global.color.dawn.900}" }
+      },
+      "celestial": {
+        "body":     { "$value": "{global.color.sunset.200}" },
+        "glow":     { "$value": "rgba(255,190,118,0.3)" },
+        "type":     { "$value": "sun" }
+      },
+      "text": {
+        "primary":   { "$value": "#F8E8D0" },
+        "secondary": { "$value": "rgba(248,232,208,0.5)" }
+      },
+      "ui": {
+        "ring":             { "$value": "rgba(255,190,118,0.85)" },
+        "ringBackground":   { "$value": "rgba(255,255,255,0.1)" },
+        "buttonBackground": { "$value": "rgba(255,255,255,0.12)" },
+        "buttonActive":     { "$value": "rgba(255,190,118,0.35)" }
+      },
+      "boat": {
+        "hull": { "$value": "#2D1B4E" },
+        "sail": { "$value": "{global.color.sunset.100}" }
+      }
+    },
+
+    "night": {
+      "sky": {
+        "top":    { "$value": "{global.color.night.600}" },
+        "mid":    { "$value": "{global.color.night.500}" },
+        "bottom": { "$value": "{global.color.night.900}" }
+      },
+      "water": {
+        "surface": { "$value": "{global.color.night.900}" },
+        "mid":     { "$value": "{global.color.night.700}" },
+        "deep":    { "$value": "{global.color.night.800}" }
+      },
+      "celestial": {
+        "body":     { "$value": "{global.color.night.100}" },
+        "glow":     { "$value": "rgba(201,214,255,0.08)" },
+        "type":     { "$value": "moon" }
+      },
+      "text": {
+        "primary":   { "$value": "{global.color.night.100}" },
+        "secondary": { "$value": "rgba(201,214,255,0.35)" }
+      },
+      "ui": {
+        "ring":             { "$value": "rgba(201,214,255,0.7)" },
+        "ringBackground":   { "$value": "rgba(255,255,255,0.06)" },
+        "buttonBackground": { "$value": "rgba(255,255,255,0.06)" },
+        "buttonActive":     { "$value": "rgba(201,214,255,0.25)" }
+      },
+      "boat": {
+        "hull": { "$value": "{global.color.night.200}" },
+        "sail": { "$value": "{global.color.night.100}" }
+      },
+      "stars": {
+        "color":    { "$value": "rgba(201,214,255,0.7)" },
+        "count":    { "$value": 35 },
+        "maxY":     { "$value": 0.42 }
+      }
+    }
+  },
+
+  "typography": {
+    "$description": "Typography tokens",
+
+    "fontFamily": {
+      "$type": "fontFamily",
+      "display":  { "$value": "Cormorant Garamond" },
+      "body":     { "$value": "DM Sans" },
+      "mono":     { "$value": "SF Mono" }
+    },
+
+    "fontWeight": {
+      "$type": "fontWeight",
+      "light":    { "$value": 300 },
+      "regular":  { "$value": 400 },
+      "medium":   { "$value": 500 }
+    },
+
+    "fontSize": {
+      "$type": "dimension",
+      "xxs":  { "$value": "11px" },
+      "xs":   { "$value": "12px" },
+      "sm":   { "$value": "13px" },
+      "md":   { "$value": "16px" },
+      "lg":   { "$value": "22px" },
+      "xl":   { "$value": "36px" },
+      "xxl":  { "$value": "42px" }
+    },
+
+    "letterSpacing": {
+      "$type": "dimension",
+      "tight":    { "$value": "0.5px" },
+      "normal":   { "$value": "1px" },
+      "wide":     { "$value": "2px" },
+      "wider":    { "$value": "3px" },
+      "widest":   { "$value": "6px" }
+    },
+
+    "lineHeight": {
+      "$type": "number",
+      "tight":   { "$value": 1.2 },
+      "normal":  { "$value": 1.5 },
+      "relaxed": { "$value": 1.6 }
+    },
+
+    "composite": {
+      "$type": "typography",
+      "$description": "Pre-composed text styles",
+
+      "appTitle": {
+        "$value": {
+          "fontFamily": "{typography.fontFamily.display}",
+          "fontWeight": "{typography.fontWeight.light}",
+          "fontSize":   "{typography.fontSize.xxl}",
+          "letterSpacing": "{typography.letterSpacing.widest}"
+        }
+      },
+      "timer": {
+        "$value": {
+          "fontFamily": "{typography.fontFamily.display}",
+          "fontWeight": "{typography.fontWeight.light}",
+          "fontSize":   "{typography.fontSize.xl}",
+          "letterSpacing": "{typography.letterSpacing.wide}"
+        }
+      },
+      "phrase": {
+        "$value": {
+          "fontFamily": "{typography.fontFamily.display}",
+          "fontWeight": "{typography.fontWeight.light}",
+          "fontSize":   "{typography.fontSize.lg}",
+          "letterSpacing": "{typography.letterSpacing.tight}",
+          "lineHeight":    "{typography.lineHeight.relaxed}"
+        }
+      },
+      "button": {
+        "$value": {
+          "fontFamily": "{typography.fontFamily.display}",
+          "fontWeight": "{typography.fontWeight.regular}",
+          "fontSize":   "{typography.fontSize.lg}",
+          "letterSpacing": "{typography.letterSpacing.wider}"
+        }
+      },
+      "pill": {
+        "$value": {
+          "fontFamily": "{typography.fontFamily.body}",
+          "fontWeight": "{typography.fontWeight.regular}",
+          "fontSize":   "{typography.fontSize.sm}",
+          "letterSpacing": "{typography.letterSpacing.normal}"
+        }
+      },
+      "label": {
+        "$value": {
+          "fontFamily": "{typography.fontFamily.body}",
+          "fontWeight": "{typography.fontWeight.light}",
+          "fontSize":   "{typography.fontSize.xxs}",
+          "letterSpacing": "{typography.letterSpacing.wide}"
+        }
+      },
+      "subtitle": {
+        "$value": {
+          "fontFamily": "{typography.fontFamily.body}",
+          "fontWeight": "{typography.fontWeight.light}",
+          "fontSize":   "{typography.fontSize.xs}",
+          "letterSpacing": "{typography.letterSpacing.wider}"
+        }
+      }
+    }
+  },
+
+  "spacing": {
+    "$type": "dimension",
+    "$description": "Spacing scale",
+
+    "xxs":  { "$value": "4px" },
+    "xs":   { "$value": "6px" },
+    "sm":   { "$value": "8px" },
+    "md":   { "$value": "12px" },
+    "lg":   { "$value": "20px" },
+    "xl":   { "$value": "24px" },
+    "2xl":  { "$value": "28px" },
+    "3xl":  { "$value": "32px" },
+    "4xl":  { "$value": "36px" },
+    "5xl":  { "$value": "48px" },
+    "6xl":  { "$value": "60px" },
+    "7xl":  { "$value": "72px" },
+    "8xl":  { "$value": "80px" }
+  },
+
+  "radius": {
+    "$type": "dimension",
+    "sm":    { "$value": "8px" },
+    "md":    { "$value": "16px" },
+    "lg":    { "$value": "24px" },
+    "pill":  { "$value": "9999px" },
+    "circle":{ "$value": "50%" }
+  },
+
+  "sizing": {
+    "$type": "dimension",
+    "$description": "Component sizing",
+
+    "sailButton":    { "$value": "120px" },
+    "progressRing":  { "$value": "200px" },
+    "progressStroke": { "$value": "2.5px" },
+    "celestialSun":  { "$value": "44px" },
+    "celestialMoon": { "$value": "28px" },
+    "boatWidth":     { "$value": "64px" },
+    "boatHeight":    { "$value": "80px" }
+  },
+
+  "animation": {
+    "$description": "Animation parameters",
+
+    "duration": {
+      "$type": "duration",
+      "instant":  { "$value": "100ms" },
+      "fast":     { "$value": "250ms" },
+      "normal":   { "$value": "500ms" },
+      "slow":     { "$value": "600ms" },
+      "slower":   { "$value": "800ms" },
+      "entrance": { "$value": "1200ms" }
+    },
+
+    "easing": {
+      "$type": "cubicBezier",
+      "easeInOut": { "$value": [0.42, 0, 0.58, 1] },
+      "easeOut":   { "$value": [0, 0, 0.58, 1] },
+      "linear":    { "$value": [0, 0, 1, 1] }
+    },
+
+    "boat": {
+      "bobDuration":    { "$value": "3500ms" },
+      "bobDistance":     { "$value": "-8px" },
+      "rotationDegree":  { "$value": 2.5 },
+      "rotationDuration": { "$value": "4000ms" }
+    },
+
+    "wave": {
+      "layer0": {
+        "amplitude":  { "$value": 8 },
+        "frequency":  { "$value": 1.5 },
+        "speed":      { "$value": "8000ms" },
+        "opacity":    { "$value": 0.35 },
+        "yOffset":    { "$value": 0.2 }
+      },
+      "layer1": {
+        "amplitude":  { "$value": 6 },
+        "frequency":  { "$value": 2.0 },
+        "speed":      { "$value": "6000ms" },
+        "opacity":    { "$value": 0.55 },
+        "yOffset":    { "$value": 0.35 }
+      },
+      "layer2": {
+        "amplitude":  { "$value": 5 },
+        "frequency":  { "$value": 2.5 },
+        "speed":      { "$value": "5000ms" },
+        "opacity":    { "$value": 0.85 },
+        "yOffset":    { "$value": 0.45 }
+      }
+    },
+
+    "star": {
+      "minDuration": { "$value": "2000ms" },
+      "maxDuration": { "$value": "4000ms" },
+      "minOpacity":  { "$value": 0.3 },
+      "maxOpacity":  { "$value": 1.0 }
+    },
+
+    "transition": {
+      "screenFade":    { "$value": "500ms" },
+      "ringAppear":    { "$value": "1000ms" },
+      "phraseEntrance": { "$value": "1200ms" }
+    }
+  },
+
+  "icons": {
+    "$description": "Icon asset registry — SVG source files in /icons/",
+    "$type": "asset",
+
+    "sailboat": {
+      "source": "icons/sailboat.svg",
+      "sizes": ["24", "32", "64"],
+      "usage": "Main boat illustration in ocean scene"
+    },
+    "wave": {
+      "source": "icons/wave.svg",
+      "sizes": ["24"],
+      "usage": "Decorative wave icon"
+    },
+    "sun": {
+      "source": "icons/sun.svg",
+      "sizes": ["24", "44"],
+      "usage": "Celestial body for dawn/day/dusk"
+    },
+    "moon": {
+      "source": "icons/moon.svg",
+      "sizes": ["24", "28"],
+      "usage": "Celestial body for night"
+    },
+    "stop": {
+      "source": "icons/stop.svg",
+      "sizes": ["16", "24"],
+      "usage": "Session stop action"
+    },
+    "play": {
+      "source": "icons/play.svg",
+      "sizes": ["16", "24"],
+      "usage": "Alternative sail/start icon"
+    }
+  },
+
+  "illustrations": {
+    "$description": "Illustration asset registry — SVG/PNG source files in /illustrations/",
+    "$type": "asset",
+
+    "boatScene": {
+      "source": "illustrations/boat-scene.svg",
+      "variants": ["dawn", "day", "dusk", "night"],
+      "usage": "Full ocean scene with boat (if using pre-rendered approach)"
+    },
+    "appIcon": {
+      "source": "illustrations/app-icon.svg",
+      "exportSizes": ["16", "32", "60", "76", "120", "152", "167", "180", "1024"],
+      "usage": "App icon — exported to AppIcon.appiconset"
+    },
+    "launchImage": {
+      "source": "illustrations/launch.svg",
+      "variants": ["light", "dark"],
+      "usage": "Launch screen background"
+    }
+  },
+
+  "sound": {
+    "$description": "Audio asset registry",
+    "$type": "asset",
+
+    "waveLoop": {
+      "source": "sounds/wave_loop.mp3",
+      "duration": "30-60s",
+      "loop": true,
+      "fadeIn": "1500ms",
+      "fadeOut": "1000ms",
+      "defaultVolume": 0.4
+    },
+    "endChime": {
+      "source": "sounds/end_chime.mp3",
+      "duration": "2-3s",
+      "loop": false,
+      "defaultVolume": 0.5
+    }
+  }
+}
